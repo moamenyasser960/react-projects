@@ -1,5 +1,6 @@
+// git@github.com:moamenyasser960/react-projects.git/
 import "./index.css";
-import App from "./App.js"
+import App from "./tic-tac-toe.js"
 import ReactDOM from "react-dom/client";
 import React from "react";
 
