@@ -2,13 +2,10 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    '/opt/lampp/htdocs/my-app/src/*.{html,js,css}', // Include your main JavaScript entry point
-    './my-app/{public,src}/*.{html,js,css}', // Look for HTML, JS, and CSS files in specific directories
-    './{public,src}/*.{html,js,css}', // Look for HTML, JS, and CSS files in public and src directories
-    '*.{html,js,css}' // Look for HTML, JS, and CSS files in the root directory
+    "/opt/lampp/htdocs/src/apps/*.{html,js,css}", // Include your main JavaScript entry point
   ],
   theme: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
-}
+  plugins: [],
+};

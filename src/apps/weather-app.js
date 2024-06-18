@@ -42,7 +42,8 @@ function WeatherDetails({ unit, weather, forecast }) {
         <FaWind className="mr-2" /> Wind Speed: {weather.wind.speed} m/s
       </p>
       {forecast && (
-        <Line className="mt-4"
+        <Line
+          className="mt-4"
           data={{
             labels: forecast.map((f) =>
               new Date(f.dt * 1000).toLocaleDateString()
@@ -128,7 +129,6 @@ function WeatherApp() {
     }
   }, []);
 
-
   const fetchWeather = async (location) => {
     try {
       const response = await axios.get(
@@ -155,7 +155,7 @@ function WeatherApp() {
       const forecastResponse = await axios.get(
         `${BASE_URL}forecast?lat=${lat}&lon=${lon}&units=${unit}&appid=${API_KEY}`
       );
-      setLocation(response.data.name)
+      setLocation(response.data.name);
       setWeather(response.data);
       setForecast(forecastResponse.data.list);
       setError("");
@@ -247,4 +247,3 @@ function WeatherApp() {
 }
 
 export default WeatherApp;
-
